@@ -66,14 +66,6 @@ The repository directory displays repository information including:
 
 ---
 
-### 🧪 API Documentation & Playground
-
-![API Documentation and Playground](./screenshots/api-documentation.png)
-
-The project also demonstrates API documentation and an interactive playground where a GET endpoint can be tested and its JSON response inspected.
-
----
-
 ## 🔄 How It Works
 
 ```text
