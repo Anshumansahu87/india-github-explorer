@@ -1,0 +1,34 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f6f8fa;color:#172033;line-height:1.5}
+.container{width:min(1120px,92%);margin:auto}
+.hero{background:#111827;color:white}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #263244}
+.nav strong{font-size:19px}.nav span{color:#9ca3af;font-size:14px}
+.hero-content{padding:70px 0 85px}.eyebrow{color:#60a5fa;font-size:12px;font-weight:bold;letter-spacing:2px;margin-bottom:12px}
+.hero h1{font-size:clamp(38px,6vw,64px);line-height:1.02;margin-bottom:20px}
+.hero-content>p:last-child{max-width:700px;color:#cbd5e1;font-size:18px}
+.panel{background:white;border:1px solid #d8dee4;border-radius:14px}
+.search-panel{margin-top:34px;padding:28px}.search-panel h2{font-size:28px}.muted{color:#57606a;margin:4px 0 20px}
+.search-row{display:flex;gap:10px}.search-row input{flex:1;padding:14px;border:1px solid #bcc4cc;border-radius:8px;font-size:16px}
+.search-row button{padding:14px 25px;border:0;border-radius:8px;background:#2563eb;color:white;font-weight:bold;cursor:pointer}
+.filters{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.filters label{font-size:13px;font-weight:bold;color:#57606a}.filters select{width:100%;margin-top:6px;padding:11px;border:1px solid #bcc4cc;border-radius:8px;background:white}
+.quick-searches{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:18px;color:#57606a;font-size:14px}
+.quick-searches button,.outline-btn{border:1px solid #d0d7de;background:white;border-radius:20px;padding:7px 12px;cursor:pointer}
+.actions{display:flex;gap:8px;margin-top:18px}.outline-btn{border-radius:8px}
+.status{margin-top:17px;color:#57606a}
+.toolbar{display:flex;justify-content:space-between;align-items:center;margin:22px 0 12px}
+.results{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;padding-bottom:35px}
+.repo-card{background:white;border:1px solid #d8dee4;border-radius:12px;padding:22px}
+.repo-title{font-size:20px}.repo-title a{color:#0969da;text-decoration:none}.repo-title a:hover{text-decoration:underline}
+.owner{color:#57606a;font-size:14px;margin:7px 0}.location{display:inline-block;background:#fff1f2;color:#be123c;padding:4px 9px;border-radius:20px;font-size:12px;font-weight:bold}
+.description{color:#57606a;min-height:48px;margin:15px 0}.repo-info{display:flex;gap:12px;flex-wrap:wrap;color:#57606a;font-size:13px;margin-bottom:17px}.language{font-weight:bold;color:#8250df}
+.card-actions{display:flex;gap:8px}.view-btn,.profile-btn{border:0;border-radius:7px;padding:9px 12px;text-decoration:none;font-weight:bold;font-size:13px;cursor:pointer}
+.view-btn{background:#111827;color:white}.profile-btn{background:#eef2ff;color:#1d4ed8}
+.favorite{float:right;border:0;background:none;font-size:20px;cursor:pointer}
+.message{grid-column:1/-1;background:white;border:1px solid #d8dee4;border-radius:12px;padding:35px;text-align:center;color:#57606a}
+.rate-limit{border-left:4px solid #dc2626}
+.profile-panel{padding:28px;margin-bottom:40px}.hidden{display:none}.profile-head{display:flex;gap:18px;align-items:center}.avatar{width:72px;height:72px;border-radius:50%}
+.profile-links{margin-top:18px}.profile-links a{background:#111827;color:white;text-decoration:none;padding:9px 13px;border-radius:7px;font-size:13px;font-weight:bold}
+footer{background:#111827;color:#cbd5e1;text-align:center;padding:25px;font-size:14px}
+@media(max-width:750px){.results{grid-template-columns:1fr}.filters{grid-template-columns:1fr}.search-row{flex-direction:column}.nav span{display:none}.hero-content{padding:55px 0 65px}}
