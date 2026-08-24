@@ -1,150 +1,96 @@
-# India GitHub Explorer — Rate Limit Safe Version
+# 🇮🇳 India GitHub Explorer
 
-> A beginner-friendly developer discovery tool for exploring public repositories from GitHub users who list India as their location.
+> A developer-focused GitHub repository discovery tool for exploring public repositories from GitHub users who list India as their location.
 
-## What is improved
+![HTML5](https://img.shields.io/badge/HTML5-Structure-orange)
+![CSS3](https://img.shields.io/badge/CSS3-Styling-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-Logic-yellow)
+![GitHub API](https://img.shields.io/badge/GitHub-REST%20API-black)
 
-This version was designed to reduce unnecessary GitHub API requests.
+---
 
-### 1. Browser caching
+## 📌 About the Project
 
-Search results are stored in `localStorage` for 10 minutes.
+**India GitHub Explorer** is a frontend web application built with **HTML5, CSS3 and Vanilla JavaScript**.
 
-```text
-First search
-   ↓
-GitHub API
-   ↓
-Save result in browser
+The application uses the **GitHub REST API** to discover public repositories from GitHub users who list **India** as their profile location.
 
-Same search again
-   ↓
-Use cached result
-   ↓
-No new API request
-```
+Users can search for technologies, filter repositories, sort results, view developer information and save favorite repositories.
 
-### 2. Fewer requests
+I built this project to practice **REST API integration, asynchronous JavaScript, Fetch API, LocalStorage, client-side caching and API error handling**.
 
-The app searches up to 5 users and loads up to 8 repositories per user instead of requesting a large number of users and repositories.
+---
 
-### 3. Rate-limit handling
+## ✨ Features
 
-If GitHub returns HTTP 403 or 429, the UI shows a clear rate-limit message instead of a generic error.
+- 🇮🇳 India-focused GitHub developer discovery
+- 🔍 Search by technology or keyword
+- 💻 Filter repositories by programming language
+- ⭐ Filter by minimum stars
+- 📊 Sort repositories
+- 👤 View GitHub developer profiles
+- ⭐ Save favorite repositories
+- 💾 LocalStorage support
+- ⚡ Client-side API caching
+- 🛑 GitHub API rate-limit handling
+- 🔗 Direct GitHub repository links
+- 📱 Responsive interface
+- ⚠️ API error handling
 
-### 4. Profile caching
+---
 
-Developer profiles are cached too, so repeatedly opening the same profile does not create another API request for 10 minutes.
+## 🖥️ Screenshots
 
-## Features
+### 🏠 Homepage
 
-- 🇮🇳 India-based developer discovery
-- Search by technology or keyword
-- Language filter
-- Minimum-star filter
-- Sort by stars, recently updated, or name
-- Developer profile
-- Favorite repositories
-- LocalStorage favorites
-- Search-result caching
-- Profile caching
-- Clear-cache button
-- GitHub API rate-limit handling
-- Responsive design
+![India GitHub Explorer Homepage](./screenshots/homepage.png)
 
-## Important technical note
+The homepage provides the main search interface and navigation for exploring GitHub repositories.
 
-GitHub does not have an official country field for repositories. This project uses the public location listed on a GitHub user's profile. Therefore it should be described as:
+---
 
-**Repositories from GitHub users who list India as their location.**
+### 📚 Repository Directory
 
-It is not a guaranteed list of every repository created by an Indian developer.
+![Repository Directory](./screenshots/api-directory.png)
 
-## APIs used
+The repository directory displays repository information including:
 
-### User search
+- Repository name
+- Owner
+- Description
+- Stars
+- Forks
+- Open issues
+- Programming language
+- GitHub repository link
 
-```text
-GET https://api.github.com/search/users?q=python+location:India
-```
+---
 
-### User repositories
+### 🧪 API Documentation & Playground
 
-```text
-GET https://api.github.com/users/USERNAME/repos
-```
+![API Documentation and Playground](./screenshots/api-documentation.png)
 
-### Developer profile
+The project also demonstrates API documentation and an interactive playground where a GET endpoint can be tested and its JSON response inspected.
 
-```text
-GET https://api.github.com/users/USERNAME
-```
+---
 
-## Tech Stack
-
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- GitHub REST API
-- Fetch API
-- JSON
-- LocalStorage
-- Git & GitHub
-
-## Project structure
+## 🔄 How It Works
 
 ```text
-india-github-explorer-fixed/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-```
-
-## Run locally
-
-1. Open the folder in VS Code.
-2. Open `index.html` with Live Server.
-3. Search for `python`, `javascript`, `react`, or `data science`.
-
-## Interview explanation
-
-> I built a GitHub developer discovery tool focused on users who list India as their location. The app searches GitHub users, retrieves their public repositories, and displays repository metrics. I implemented client-side filtering, sorting, favorites, profile lookup and LocalStorage caching. I also added API rate-limit handling to reduce unnecessary requests and provide a useful message when GitHub rejects requests.
-
-## Main JavaScript concepts
-
-### Fetch API
-
-Used to send GET requests to GitHub.
-
-### async/await
-
-Used to handle asynchronous API responses in readable JavaScript.
-
-### Promise.all
-
-Used to request several users' repositories in parallel.
-
-### LocalStorage
-
-Used for:
-
-- API result caching
-- Favorite repositories
-- Avoiding repeated requests
-
-### Error handling
-
-`try/catch` and HTTP status checks handle failed API requests and rate limits.
-
-## Current API limitation
-
-Unauthenticated GitHub API access has rate limits. Caching reduces requests, but it cannot remove GitHub's limit completely.
-
-A production application could use a backend server with secure authentication and additional caching.
-
-## Author
-
-**Anshuman Sahu**
-
-Portfolio project for practicing REST APIs, JavaScript, GitHub API integration and developer-focused UX.
+User enters a keyword
+        ↓
+GitHub User Search API
+        ↓
+Find users who list India
+        ↓
+Get their public repositories
+        ↓
+Receive JSON response
+        ↓
+JavaScript processes the data
+        ↓
+Search + Filter + Sort
+        ↓
+Display repository cards
+        ↓
+Favorites saved in LocalStorage
